@@ -8,7 +8,7 @@ body {
     color: #fff;
   }
   main, .content, section {
-    margin-top: 120px;
+    margin-top: 80px;
   }
   html {
     scroll-behavior: smooth;
@@ -16,11 +16,12 @@ body {
    section {
     text-align: center;
     padding: 100px 20px;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .site-header {
     background-color: black;
     position: fixed;
@@ -32,6 +33,7 @@ body {
     flex-direction: column; /* 🔥 Põe logo em cima, menu embaixo */
     align-items: center;
     gap: 10px; /* Espaço entre logo e menu */
+
   }
 
   .container {
@@ -129,9 +131,13 @@ body {
 
   .intro {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 20px 40px 1px;
     background-color: #000000;
     color: #ffffff;
+    background-image: url(imagens/ChatGPT\ Image\ 6\ de\ abr.\ de\ 2025\,\ 12_07_01.png);
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
   }
   
   .intro h1 {
