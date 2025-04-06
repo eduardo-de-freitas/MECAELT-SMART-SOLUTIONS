@@ -31,34 +31,44 @@ body {
     padding: 20px 10px;
     display: flex;
     flex-direction: column; /* 🔥 Põe logo em cima, menu embaixo */
-    align-items: center;
-    gap: 10px; /* Espaço entre logo e menu */
 
   }
 
   .container {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .logo img {
-    .logo img {
-      height: 50px;
-      width: auto;
+  .logo-container {
+    max-width: 200px;
+    overflow: hidden;
+  }
+
+  .logo{
+    .logo{
+      width: 100px; /* ou o tamanho que você quiser */
+  height: auto;
+  display: block;
     }
   }
-  
+  .nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+  }
   .nav-menu ul {
     list-style: none;
-    display: flex;
+    font-weight: bold;
     gap: 30px;
-    justify-content: center;
     padding: 0;
-    margin: 0;
+    display: flex;
+  justify-content: space-between;
+  font-size: 26px;
   }
   
   .nav-menu ul li a {
@@ -66,6 +76,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
+  text-align: center;
   }
   
   .nav-menu ul li a:hover {
