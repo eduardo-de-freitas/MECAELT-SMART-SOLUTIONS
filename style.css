@@ -7,13 +7,6 @@ body {
     background-color: #0d0d0d;
     color: #fff;
 
-    .Fonte {
-      font-family: "Roboto", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400; /* ou 100 até 900, dependendo do peso que você quer */
-      font-style: normal;
-      font-variation-settings: "wdth" 100;
-    }
   }
   main, .content, section {
     margin-top: 80px;
