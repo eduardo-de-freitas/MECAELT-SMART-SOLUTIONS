@@ -124,7 +124,7 @@ body {
 
   .avaliacoes{
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     height: 400px;
     margin: 50px auto;
     animation: float 2s ease-in-out infinite;
