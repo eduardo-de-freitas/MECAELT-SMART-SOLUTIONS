@@ -4,19 +4,18 @@ body {
   }
     margin: 0 auto;
     font-family: 'Satoshi', sans-serif;
-    background-color: #0d0d0d;
+    background: linear-gradient(75deg, #111111 50%, #0d0d0d 50%);
+
     color: #fff;
 
   }
   main, .content, section {
-    margin-top: 80px;
   }
   html {
     scroll-behavior: smooth;
   }
    section {
     text-align: center;
-    padding: 100px 20px;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -24,37 +23,57 @@ body {
   }
 
   .site-header {
-    background-color: rgb(39, 39, 39);
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1000;
-    padding: 20px 10px;
+    z-index: 10;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    height: 140px;
     display: flex;
-    flex-direction: column; /* 🔥 Põe logo em cima, menu embaixo */
-
+    align-items: center;
   }
 
+  .site-header.scrolled{
+    background-color: #111111;
+  }
+
+  .texto {
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 5px #fff,
+                 0 0 30px rgb(255, 255, 255);
+  }
+
+
   .container {
-    max-width: 1200px;
+    max-width: 100%;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .logo-container {
     max-width: 200px;
     overflow: hidden;
   }
 
   .logo{
-    .logo{
-      width: 100px; /* ou o tamanho que você quiser */
-  height: auto;
-  display: block;
-    }
+      width: 100px;
+      height: auto;
+      margin-left: 30px;
+      display: flex;
+      justify-content: start;
+
   }
+
   .nav-menu {
     position: absolute;
     left: 50%;
@@ -71,43 +90,122 @@ body {
   justify-content: space-between;
   font-size: 22px;
   }
-  
-  .nav-menu ul li a {
-    text-decoration: none;
-    color: white;
-    background:  transparent;
-    padding: 9px;
-    border-radius: 20px;
-    width: 150px;
-    cursor: pointer;
-  }
-  
-  .nav-menu ul li a:hover {
-    background-color: black;
-    color: white;
-    transition: 0.5s;
+
+  .imagem{
+    background-image: url(imagens/mecaelt.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
-  
-  h1, h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
+  .divResultados{
+    width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+
+  .divInsta{
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+
+  .divInstaMeio{
+    background-repeat: no-repeat;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+
+  .imgResult{
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+  }
+
+  .imgResult:hover{
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px #1A347C,
+      0 0 20px #1A347C;
+  }
+
+  .nav-menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    background: transparent;
+    padding: 9px;
+    width: 150px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff, 0 0 80px rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #fff, rgb(255, 255, 255), #fff);
+    box-shadow: 0 0 10px #fff, 0 0 20px rgb(255, 255, 255), 0 0 40px #fff;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .nav-menu ul li a:hover {
+    color: white;
+  }
+
+  .nav-menu ul li a:hover::after {
+    opacity: 1;
+  }
+
+  .quemSomos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55rem;
+  }
+
+  h1 {
+    font-size: 88px;
+    margin-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+
+  h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+
   p {
-    font-size: 20px;
+    font-size: 25px;
     max-width: 800px;
     margin: 0 auto;
   }
-  
+
   /* Carrossel */
   .swiper {
-    width: 100%;
+    width: 600px;
     max-width: 1200px;
     height: 400px;
     margin: 50px auto;
   }
-  
+
   .swiper-slide {
     background-position: center;
     background-size: cover;
@@ -119,18 +217,31 @@ body {
     width: 100%;
     max-width: 800px;
     height: 400px;
-    margin: 50px auto;
-    animation: float 2s ease-in-out infinite;
+    margin-left: 100px;
+    animation: float 2s infinite;
+  }
+
+  .textoQuemSomos{
+    text-align: left;
+    width: 500px;
+  }
+
+  .chamaWpp{
+    text-decoration: none;
+    color: #25D366;
+    width: 100%;
+  }
+
+  .chamaWpp:hover{
+    text-decoration: none;
+    color: white;
   }
 
   @keyframes float{
     0%,100%{
       transform: translateY(0);
+    }
   }
-  50%{
-    transform: translateY(-50px);
-  } 
-}
   /* Botão WhatsApp */
   .whatsapp-button {
     position: fixed;
@@ -149,7 +260,110 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     transition: background 0.3s;
   }
-  
+
+  .orcamento{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .divOrcamento{
+    margin-top: 100px;
+    color: #fff;
+    width: 40rem;
+    height: 45rem;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 1px #1f48b8;
+    background-color: #0d0d0d;
+  }
+
+  .txtOrcamento{
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .txtOrcamentoUltimo{
+    margin-bottom: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .tituloOrcamento{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .btnOrcamento{
+    width: 80%;
+    height: 80px;
+    color: #25D366;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: transparent;
+    border: solid;
+    border-color: #25D366;
+    border-width: 1px;
+    background: linear-gradient(90deg, #25D366 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.5s ease;
+  }
+  .btnOrcamento:hover{
+      background-position: 0 0;
+      box-shadow: 0 0 12px 1px #25D366;
+      color: white;
+  }
+
+  .divFooter{
+    background-color: #1A347C;
+    width: 100%;
+    height: 105px;
+  }
+
+  .txtFooter{
+    color: #111111;
+    font-size: 18px;
+  }
+
+  .txtFooterDev{
+    color: #111111;
+    font-size: 16px;
+  }
+
+  .telefone{
+    text-decoration: none;
+    font-size: 18px;
+    color: #111111;
+  }
+
+  .divLinha{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .divProdutos{
+    margin-top: 200px;
+    width: 100%;
+    height: 35vh;
+  }
+
+  .linha{
+    width: 700px;
+    height: 0.5px;
+    background-color: white;
+
+  }
+
   .whatsapp-button:hover {
     background-color: #128C7E;
   }
@@ -161,12 +375,11 @@ body {
   font-weight: bold;
   }
 
-  .intro {
+  /* .intro {
     text-align: center;
   padding: 0;
   background-color: #000000;
   color: #ffffff;
-  background-image: url(imagens/mecaelt.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -176,14 +389,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
-  
+  } */
+
   .intro h1 {
     font-size: 60px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
-  
+
   .intro p {
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0.4);
@@ -192,25 +405,23 @@ body {
     display: inline-block;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
-  
+
   /* Footer */
   footer {
-    background-color: #1a1a1a;
-    padding: 30px;
     font-size: 16px;
-  text-align: center;
+    text-align: center;
   }
-  
+
   /* Responsivo */
   @media (max-width: 768px) {
     h1, h2 {
       font-size: 32px;
     }
-  
+
     p {
       font-size: 18px;
     }
-  
+
     .swiper {
       height: 300px;
     }

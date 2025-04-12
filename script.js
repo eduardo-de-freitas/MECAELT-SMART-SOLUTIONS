@@ -13,3 +13,14 @@ const swiper = new Swiper('.swiper', {
       disableOnInteraction: false
     }
   });
+
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("site-header");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+AOS.init();
