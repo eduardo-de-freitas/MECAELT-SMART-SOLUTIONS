@@ -207,7 +207,8 @@ body {
 
   .swiper-slide {
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 20px;
     overflow: hidden;
   }
@@ -269,7 +270,7 @@ body {
   }
 
   .divOrcamento{
-    margin-top: 100px;
+    margin-top: 200px;
     color: #fff;
     width: 40rem;
     height: 45rem;
