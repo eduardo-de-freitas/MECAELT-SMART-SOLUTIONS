@@ -1,8 +1,4 @@
 body {
-  main {
-    margin-top: 70px;
-  }
-
   margin: 0 auto;
   font-family: 'Satoshi', sans-serif;
   background: linear-gradient(75deg, #111111 50%, #0d0d0d 50%);
@@ -15,7 +11,6 @@ html {
 
 section {
   text-align: center;
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,13 +22,20 @@ section {
   z-index: 10;
   background-color: transparent;
   transition: background-color 0.5s ease;
-  height: 140px;
   display: flex;
   align-items: center;
 }
 
 .site-header.scrolled {
   background-color: #111111;
+}
+
+#Solucoes{
+  height: 60vh;
+}
+
+#quemSomos{
+  height: 60vh;
 }
 
 .texto {
@@ -154,7 +156,24 @@ section {
   box-shadow: 0 0 10px #1A347C, 0 0 20px #1A347C;
 }
 
-.nav-menu ul li a {
+.navbar .nav-link {
+  color: white !important;
+}
+
+.opcao{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 190px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mob{
+  margin-right: 40px;
+}
+
+ul li a {
   position: relative;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -164,9 +183,11 @@ section {
   cursor: pointer;
   text-shadow: 0 0 5px #000000, 0 0 80px rgb(0, 0, 0);
   transition: all 0.3s ease;
+  margin-right: 5rem;
+  text-align: center;
 }
 
-.nav-menu ul li a::after {
+ul li a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -179,11 +200,11 @@ section {
   transition: opacity 0.4s ease;
 }
 
-.nav-menu ul li a:hover {
+ul li a:hover {
   color: white;
 }
 
-.nav-menu ul li a:hover::after {
+ul li a:hover::after {
   opacity: 1;
 }
 
@@ -197,7 +218,7 @@ section {
 }
 
 h1 {
-  font-size: 88px;
+  font-size: 70px;
   text-align: center;
   margin-bottom: 20px;
   font-family: "Oswald", sans-serif;
@@ -207,12 +228,14 @@ h2 {
   font-size: 55px;
   margin-bottom: 20px;
   font-family: "Oswald", sans-serif;
+  text-align: center;
 }
 
 p {
-  font-size: 25px;
+  font-size: 33px;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .textoQuemSomos {
@@ -221,7 +244,7 @@ p {
 }
 
 #carouselsolucoes {
-  width: 1000px;
+  width: 60rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
@@ -229,6 +252,7 @@ p {
   display: flex;
   justify-content: center;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 
 #carouselsolucoes .carousel-inner {
@@ -344,8 +368,11 @@ p {
 /* Botão WhatsApp */
 .whatsapp-button {
   position: fixed;
-  bottom: 20px;
+  display: flex;
   right: 20px;
+  bottom: 20px;
+  justify-content: end;
+  align-items: end;
   background-color: #25D366;
   color: white;
   padding: 15px;
@@ -388,7 +415,7 @@ p {
   margin-top: 50px;
   color: #fff;
   width: 41rem;
-  height: 45rem;
+  height: 35rem;
   border-radius: 20px;
   padding: 50px;
   display: flex;
@@ -470,7 +497,8 @@ p {
 
 .divProdutos {
   width: 100%;
-  height: 230vh;
+  height: 100%;
+  margin-top: 40px;
 }
 
 .linha {
@@ -506,12 +534,43 @@ p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.navbar-toggler-icon {
+  background-image: none; /* remove o ícone padrão */
+  width: 30px;
+  height: 3px;
+  background-color: white; /* cor das linhas */
+  display: block;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -10px;
+}
+
+.navbar-toggler-icon::after {
+  top: 10px;
+}
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.479);
+  height: 40px;
+}
+
+
 /* Footer */
 footer {
   font-size: 16px;
   text-align: center;
 }
-
 
   @media (max-width: 1480px) {
     .divResultados{
@@ -522,4 +581,168 @@ footer {
       margin-top: 3rem;
       margin-bottom: 3rem;
     }
+    .quemSomos{
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+    #carouselsolucoes{
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .textoQuemSomos {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    #carouselprodutos{
+      width: 100%;
+      margin: 0;
+    }
+    #carouselprodutos2{
+      width: 100%;
+      margin: 0;
+    }
+    #carouselprodutos3{
+      width: 100%;
+      margin: 0;
+    }
+    #carouselquemsomos{
+      width: 100%;
+    }
+    .texto{
+      font-size: 10px;
+    }
+    #Solucoes{
+      height: 100%;
+    }
+
+    h1{
+      font-size: 50px;
+    }
   }
+
+  @media(max-width: 1050px){
+    ul li a {
+      margin-right: 1rem;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    body{
+      width: 100%;
+    }
+    ul li a {
+      margin: 0;
+    }
+    .divResultados{
+      flex-direction: column;
+      height: 100%;
+    }
+    .divInstaMeio{
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    .quemSomos{
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+    #carouselsolucoes{
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .textoQuemSomos {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    #carouselprodutos{
+      width: 100%;
+      margin: 0;
+    }
+    #carouselprodutos2{
+      width: 100%;
+      margin: 0;
+    }
+    #carouselprodutos3{
+      width: 100%;
+      margin: 0;
+    }
+    #carouselquemsomos{
+      width: 100%;
+    }
+    .texto{
+      font-size: 10px;
+    }
+    #Solucoes{
+      height: 100%;
+    }
+
+    h1{
+      font-size: 50px;
+    }
+
+    .divOrcamento{
+      height: 100%;
+      width: 100%;
+    }
+
+    .linha {
+      width: 30%;
+      height: 0.5px;
+      background-color: white;
+    }
+
+    .divOrcamento{
+      height: 100%;
+      width: 90%;
+    }
+
+  }
+  @media(max-width:500px){
+    .imgResult{
+     width: 70%;
+     height: 80%;
+    }
+    h1{
+      font-size: 30px;
+    }
+    p{
+      font-size: 20px;
+    }
+    .divInstaMeio{
+      margin: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .txtOrcamento {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .txtOrcamentoUltimo {
+      margin-bottom: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .tituloOrcamento {
+      font-weight: bold;
+      font-size: 40px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .divOrcamento{
+      height: 100%;
+      width: 90%;
+      padding: 30px;
+    }
+    h2{
+      font-size: 40px;
+    }
+  }
+
+
+

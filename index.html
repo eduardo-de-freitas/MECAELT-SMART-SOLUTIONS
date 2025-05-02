@@ -33,24 +33,39 @@
 
 <body>
 
-  <!-- Hero / Principal -->
   <header id="site-header" class="site-header">
+    <nav class="navbar navbar-expand-lg w-100">
       <!-- Logo -->
-      <div class= "logo">
-        <a href="#home">
-          <img src="imagens/Original Clean.png" alt="Logo " class="logo">
-        </a>
-      </div>
-      <!-- Navegação -->
-      <nav class="nav-menu" class="w-100">
-        <ul>
-          <li class="opcao"><a class="Fonte"href="#Solucoes">SOLUÇÕES</a></li>
-          <li class="opcao"><a class="Fonte"href="#QuemSomos">QUEM SOMOS</a></li>
-          <li class="opcao"><a class="Fonte"href="#Produtos">PRODUTOS</a></li>
-          <li class="opcao"><a class="Fonte"href="#Resultados">RESULTADOS</a></li>
-          <li class="opcao"><a class="Fonte"href="https://wa.me/SEUNUMEROAQUI" target="_blank">CONTATO</a></li>
+      <a class="navbar-brand" href="#home">
+        <img src="imagens/Original Clean.png" alt="Logo" class="logo" style="height: 140px;">
+      </a>
+
+      <!-- Botão responsivo para abrir menu -->
+      <button class="navbar-toggler mob" type="button" data-bs-toggle="collapse" data-bs-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Conteúdo do menu -->
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav opcao">
+          <li class="nav-item ">
+            <a class="nav-link Fonte" href="#Solucoes">SOLUÇÕES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link Fonte" href="#QuemSomos">QUEM SOMOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link Fonte" href="#Produtos">PRODUTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link Fonte" href="#Resultados">RESULTADOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link Fonte" href="https://wa.me/SEUNUMEROAQUI" target="_blank">CONTATO</a>
+          </li>
         </ul>
-      </nav>
+      </div>
+    </nav>
   </header>
   <div class="imagem">
     <video autoplay muted loop playsinline class="video-bg">
@@ -70,13 +85,13 @@
     <p>Especialistas em tecnologia residencial de ponta para você viver melhor.</p>
     <div id="carouselsolucoes" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner ">
-        <div class="carousel-item active " data-bs-interval="10000">
+        <div class="carousel-item active" data-bs-interval="2000">
           <img src="imagens/1.png" class="d-block" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
           <img src="imagens/2.png" class="d-block " alt="...">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item"  data-bs-interval="2000">
           <img src="imagens/3.png" class="d-block " alt="...">
         </div>
       </div>
@@ -98,8 +113,8 @@
     </div>
   </div>
 
-  <div class="quemSomos" data-aos="fade-up"
-  data-aos-duration="3000" class="w-100">
+  <div id="quemSomos" class="quemSomos w-100" data-aos="fade-up"
+  data-aos-duration="3000">
     <section id="QuemSomos" class="textoQuemSomos">
       <h2>Quem Somos</h2>
       <p>Automação de iluminação, segurança, áudio e muito mais.</p>
@@ -139,11 +154,14 @@
     <!--Carrossel-->
     <div id="carouselprodutos" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="imagens/seguranca1.png" class="d-block w-100" alt="...">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="imagens/segurança1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="imagens/seguranca2.png" class="d-block w-100" alt="...">
+          <img src="imagens/segurança2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="imagens/segurança3.png" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselprodutos" data-bs-slide="prev">
@@ -156,16 +174,17 @@
       </button>
     </div>
 
+
     <h2 class="tituloSep">Som</h2>
     <div id="carouselprodutos2" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item active" data-bs-interval="2000">
           <img src="imagens/som1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
           <img src="imagens/som2.png" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="2000">
           <img src="imagens/som3.png" class="d-block w-100" alt="...">
         </div>
       </div>
@@ -242,11 +261,8 @@
     <div class="divOrcamento">
       <div class="textoOrcamento">
         <h2 class="tituloOrcamento">Solicite Seu Orçamento</h2>
-          <p class="txtOrcamento">Vamos transformar sua casa ou empresa com soluções inteligentes e sob medida da Mecaelt. Nossa equipe está pronta para entender suas necessidades e desenvolver um projeto totalmente personalizado para sua realidade.
+          <p class="txtOrcamento">Solicite um orçamento gratuito com a Mecaelt para transformar sua casa ou empresa com soluções personalizadas em automação, conforto e tecnologia. Fale agora com um especialista.
           </p>
-          <p class="txtOrcamento">Solicite agora mesmo um orçamento gratuito e fale diretamente com um de nossos especialistas. Será um prazer te atender e encontrar a melhor solução em automação, conforto e tecnologia.
-          </p>
-          <p class="txtOrcamentoUltimo">Fale com um especialista</p>
       </div>
       <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" class="chamaWpp">
         <button class="btnOrcamento">
