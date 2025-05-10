@@ -31,11 +31,11 @@ section {
 }
 
 #Solucoes{
-  height: 60vh;
+  height: 100%;
 }
 
 #quemSomos{
-  height: 60vh;
+  height: 100%;
 }
 
 .texto {
@@ -65,7 +65,7 @@ section {
 
 .logo {
   width: 10rem;
-  height: auto;
+  height: 140px;
   margin-left: 2rem;
   display: flex;
   justify-content: start;
@@ -244,7 +244,7 @@ p {
 }
 
 #carouselsolucoes {
-  width: 60rem;
+  width: 80rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
@@ -268,7 +268,7 @@ p {
 }
 
 #carouselquemsomos {
-  width: 800px;
+  width: 700px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -535,10 +535,10 @@ p {
 }
 
 .navbar-toggler-icon {
-  background-image: none; /* remove o ícone padrão */
+  background-image: none;
   width: 30px;
   height: 3px;
-  background-color: white; /* cor das linhas */
+  background-color: white;
   display: block;
   position: relative;
 }
@@ -741,6 +741,44 @@ footer {
     }
     h2{
       font-size: 40px;
+    }
+    .logo {
+      width: 6rem;
+      height: 6rem;
+      margin-left: 2rem;
+      display: flex;
+      justify-content: start;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      display: block;
+      position: relative;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+      content: "";
+      background-color: white;
+      width: 20px;
+      height: 3px;
+      position: absolute;
+      left: 0;
+    }
+
+    .navbar-toggler-icon::before {
+      top: -10px;
+    }
+
+    .navbar-toggler-icon::after {
+      top: 10px;
+    }
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.479);
+      height: 35px;
     }
   }
 
