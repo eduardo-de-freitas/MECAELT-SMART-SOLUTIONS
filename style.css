@@ -114,12 +114,24 @@ section {
 
 .imagem {
   min-height: 100svh;
+  position: relative;
+  padding-top: 230px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  .imagem {
+    padding-top: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .imagem {
+    padding-top: 160px;
+  }
 }
 
 .imagem::after {
