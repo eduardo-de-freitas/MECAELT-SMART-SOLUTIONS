@@ -268,7 +268,7 @@ p {
 }
 
 #carouselquemsomos {
-  width: 700px;
+  width: 500px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -284,7 +284,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 #carouselprodutos {
@@ -502,7 +502,7 @@ p {
 }
 
 .linha {
-  width: 700px;
+  width: 600px;
   height: 0.5px;
   background-color: white;
 }
