@@ -264,11 +264,12 @@ p {
 
 .textoQuemSomos {
   text-align: left;
+  margin-right: 100px;
   width: 500px;
 }
 
 #carouselsolucoes {
-  width: 80rem;
+  width: 65rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
@@ -292,15 +293,18 @@ p {
 }
 
 #carouselquemsomos {
-  width: 450px;
+  width: 30rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
   border-radius: 10px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
 }
 
 #carouselquemsomos .carousel-inner {
-  width: 80%;
+  width: 75%;
   height: 100%;
 }
 
@@ -308,7 +312,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #carouselprodutos {
@@ -604,6 +608,13 @@ footer {
     .divResultados{
       flex-direction: column;
       height: 100%;
+      margin-bottom: 30px;
+    }
+    .textoQuemSomos{
+      margin: 0px;
+    }
+    .orcamento{
+      padding: 30px;
     }
     .divInstaMeio{
       margin-top: 3rem;
@@ -625,18 +636,15 @@ footer {
     }
     #carouselprodutos{
       width: 100%;
-      margin: 0;
     }
     #carouselprodutos2{
       width: 100%;
-      margin: 0;
     }
     #carouselprodutos3{
       width: 100%;
-      margin: 0;
     }
     #carouselquemsomos{
-      width: 100%;
+      width: 40%;
     }
     .texto{
       font-size: 10px;
@@ -654,12 +662,18 @@ footer {
     ul li a {
       margin-right: 1rem;
     }
+    .textoQuemSomos{
+      margin: 0px;
+    }
 
   }
 
   @media (max-width: 768px) {
     body{
       width: 100%;
+    }
+    .textoQuemSomos{
+      margin: 0px;
     }
     ul li a {
       margin: 0;
@@ -699,7 +713,7 @@ footer {
       margin: 0;
     }
     #carouselquemsomos{
-      width: 100%;
+      width: 70%;
     }
     .texto{
       font-size: 10px;
@@ -710,11 +724,6 @@ footer {
 
     h1{
       font-size: 50px;
-    }
-
-    .divOrcamento{
-      height: 100%;
-      width: 100%;
     }
 
     .linha {
@@ -734,6 +743,7 @@ footer {
      width: 70%;
      height: 80%;
     }
+
     @media (max-width: 992px) {
       h1 {
         font-size: 36px;
@@ -790,7 +800,7 @@ footer {
 
     .divOrcamento{
       height: 100%;
-      width: 90%;
+      width: 100%;
       padding: 30px;
     }
     h2{
